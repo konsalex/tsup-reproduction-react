@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "declaration": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "module": "ESNext",
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@test-lib/react/*": ["packages/*/lib"]
+    }
+  },
+  "exclude": ["node_modules", "**/*.test.*"]
+}

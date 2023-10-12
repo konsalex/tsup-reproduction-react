@@ -1,0 +1,33 @@
+{
+  "name": "@test-lib/core-monorepo",
+  "scripts": {
+    "dev": "yarn workspace @table-nav/website dev",
+    "test": "yarn workspaces foreach run test",
+    "build": "yarn workspaces foreach run build",
+    "watch": "concurrently -n core,react 'yarn workspace @test-lib/react watch' 'yarn workspace @test-lib/website dev'",
+    "lint": "eslint --ignore-path .gitignore --quiet --no-error-on-unmatched-pattern packages/**/*{js,jsx,ts,tsx}"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "typescript": "5.2.2"
+  },
+  "resolutions": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "packageManager": "yarn@3.6.4"
+}
